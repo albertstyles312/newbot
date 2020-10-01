@@ -1,0 +1,6 @@
+node_modules
+debug.log
+*.data.json
+.node-persist
+*.code-workspace
+package-lock.json
