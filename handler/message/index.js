@@ -108,7 +108,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             break
             case 'instagram':
             case 'ig':
-                if (args.length !== 1) return client.reply(from, '⚠️ Format salah! Ketik *$menu1* untuk penggunaan. [WRONG FORMAT]', id)
+                if (args.length !== 1) return client.reply(from, '⚠️ Format salah! Ketik *$menu* untuk penggunaan. [WRONG FORMAT]', id)
                 if (!isUrl(url) && !url.includes('instagram.com')) return client.reply(from, '⚠️ Link tidak valid! [INVALID]', id)
                 client.reply(from, '_Mohon tunggu sebentar ya daling, proses ini akan memakan waktu beberapa menit..._\n\nMerasa terbantu karena bot ini? Bantu saya dengan cara donasi melalui:\n085866040557 (DANA)\n\nTerima kasih 🙏', id)
                 const link = igm.download(url)
@@ -120,7 +120,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
                 })
             break
             case 'tiktok':
-                if (args.length !== 1) return client.reply(from, '⚠️ Format salah! Ketik *$menu1* untuk penggunaan. [WRONG FORMAT]', id)
+                if (args.length !== 1) return client.reply(from, '⚠️ Format salah! Ketik *$menu* untuk penggunaan. [WRONG FORMAT]', id)
                 if (!isUrl(url) && !url.includes('tiktok.com')) return client.reply(from, '⚠️ Link tidak valid! [INVALID]', id)
                 await client.reply(from, `_Mohon tunggu sebentar ya daling, proses ini akan memakan waktu beberapa menit..._\n\nMerasa terbantu karena bot ini? Bantu saya dengan cara donasi melalui:\n085866040557 (DANA)\n\nTerima kasih 🙏`, id)
                 downloader.tiktok(url)
@@ -135,7 +135,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             break
             case 'twitter':
             case 'twt':
-                if (args.length !== 1) return client.reply(from, '⚠️ Format salah! Ketik *$menu1* untuk penggunaan. [WRONG FORMAT]', id)
+                if (args.length !== 1) return client.reply(from, '⚠️ Format salah! Ketik *$menu* untuk penggunaan. [WRONG FORMAT]', id)
                 if (!isUrl(url) && !url.includes('twitter.com') || url.includes('t.co')) return client.reply(from, '⚠️ Link tidak valid! [INVALID]', id)
                 await client.reply(from, '_Mohon tunggu sebentar ya daling, proses ini akan memakan waktu beberapa menit..._\n\nMerasa terbantu karena bot ini? Bantu saya dengan cara donasi melalui:\n085866040557 (DANA)\n\nTerima kasih 🙏', id)
                 downloader.tweet(url)
@@ -161,7 +161,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
                 })
             break
             case 'ytmp3':
-                if (args.length !== 1) return client.reply(from, '⚠️ Format salah! Ketik *$menu1* untuk penggunaan. [WRONG FORMAT]', id)
+                if (args.length !== 1) return client.reply(from, '⚠️ Format salah! Ketik *$menu* untuk penggunaan. [WRONG FORMAT]', id)
                 if (!isYt(url)) return client.reply(from, '⚠️ Link tidak valid! [INVALID]', id)
                 await client.reply(from, '_Mohon tunggu sebentar ya daling, proses ini akan memakan waktu beberapa menit..._\n\nMerasa terbantu karena bot ini? Bantu saya dengan cara donasi melalui:\n085866040557 (DANA)\n\nTerima kasih 🙏', id)
                 axios.get('https://mhankbarbar.herokuapp.com/api/yta?url=' + url)
@@ -179,7 +179,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
                 })
             break
             case 'ytmp4':
-                if (args.length !== 1) return client.reply(from, '⚠️ Format salah! Ketik *$menu1* untuk penggunaan. [WRONG FORMAT]', id)
+                if (args.length !== 1) return client.reply(from, '⚠️ Format salah! Ketik *$menu* untuk penggunaan. [WRONG FORMAT]', id)
                 if (!isYt(url)) return client.reply(from, '⚠️ Link tidak valid! [INVALID]', id)
                 await client.reply(from, '_Mohon tunggu sebentar ya daling, proses ini akan memakan waktu beberapa menit..._\n\nMerasa terbantu karena bot ini? Bantu saya dengan cara donasi melalui:\n085866040557 (DANA)\n\nTerima kasih 🙏', id)
                 axios.get('https://mhankbarbar.herokuapp.com/api/ytv?url=' + url)
@@ -216,7 +216,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
                         ? client.sendText(from, '⚠️ Link yang dikirim tidak dapat dimuat! [CANNOT LOAD]')
                         : client.reply(from, 'Silakan')).then(() => console.log(`Sticker processed for ${processTime(t, moment())} second`))
                 } else {
-                    client.reply(from, '⚠️ Format salah! Ketik *$menu2* untuk penggunaan. [WRONG FORMAT]', id)
+                    client.reply(from, '⚠️ Format salah! Ketik *$menu* untuk penggunaan. [WRONG FORMAT]', id)
                 }
             break
 
@@ -225,7 +225,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             case '8ball':
                 const question = args.join(' ')
                 const answer = responses[Math.floor(Math.random() * (responses.length))]
-                if (!question) return client.reply(from, '⚠️ Format salah! Ketik *$menu3* untuk penggunaan. [WRONG FORMAT]')
+                if (!question) return client.reply(from, '⚠️ Format salah! Ketik *$menu* untuk penggunaan. [WRONG FORMAT]')
                 await client.sendText(from, `Pertanyaan: *${question}* \n\nJawaban: ${answer}`)
             break
             case 'coinflip':
@@ -254,7 +254,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
                 })
             break
             case 'reverse':
-                if (args.length < 1) return client.reply(from, '⚠️ Format salah! Ketik *$menu3* untuk penggunaan. [WRONG FORMAT]')
+                if (args.length < 1) return client.reply(from, '⚠️ Format salah! Ketik *$menu* untuk penggunaan. [WRONG FORMAT]')
                 await client.sendText(from, args.join(' ').split('').reverse().join(''))
             break
             case 'roll':
@@ -265,7 +265,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             case 'say':
             case 'talk':
                 const sayMessage = args.join(' ')
-                if (!sayMessage) return client.reply(from, '⚠️ Format salah! Ketik *$menu3* untuk penggunaan. [WRONG FORMAT]')
+                if (!sayMessage) return client.reply(from, '⚠️ Format salah! Ketik *$menu* untuk penggunaan. [WRONG FORMAT]')
                 await client.sendText(from, sayMessage)
             break
         
@@ -277,8 +277,8 @@ module.exports = msgHandler = async (client = new Client(), message) => {
             break
             case 'delete':
             case 'del':
-                if (!quotedMsg) return client.reply(from, '⚠️ Format salah! Ketik *$menu4* untuk penggunaan. [WRONG FORMAT]', id)
-                if (!quotedMsgObj.fromMe) return client.reply(from, '⚠️ Format salah! Ketik *$menu4* untuk penggunaan. [WRONG FORMAT]', id)
+                if (!quotedMsg) return client.reply(from, '⚠️ Format salah! Ketik *$menu* untuk penggunaan. [WRONG FORMAT]', id)
+                if (!quotedMsgObj.fromMe) return client.reply(from, '⚠️ Format salah! Ketik *$menu* untuk penggunaan. [WRONG FORMAT]', id)
                 await client.deleteMessage(quotedMsgObj.chatId, quotedMsgObj.id, false)
             break
             case 'donate':
@@ -305,7 +305,7 @@ module.exports = msgHandler = async (client = new Client(), message) => {
                 await client.sendText(from, menuId.textMenu5())
             break
             case 'menu':
-                await client.sendText(from, menuId.textMenuAll())
+                await client.sendText(from, menuId.textMenu())
             break
             case 'speed':
             case 'ping':
