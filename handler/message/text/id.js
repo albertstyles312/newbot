@@ -43,7 +43,8 @@ Terima kasih! 🙏
 
 exports.textMenu = () => {
     return `
-    ⚠️ *ALL COMMANDS* ⚠️
+Selamat Menggunakan *ZeroTwo Bot* Ini
+Tolong Jangan Di *SPAM* Ya Daling
 
 *ABAIKAN TANDA <>*
 Downloader:
@@ -346,7 +347,9 @@ exports.textAdmin = () => {
     return `
 ⚠️ [ *ADMIN ONLY* ] ⚠️
 
-*ABAIKAN TANDA <>*
+Selamat Menggunakan *ZeroTwo Bot* Ini
+Tolong Jangan Di *SPAM* Ya Daling
+
 Gunakan command ini jika admin terlalu malas:
 1. *$add*
 Tambahkan orang ke grup.
