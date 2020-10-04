@@ -36,6 +36,9 @@ const responses = [
     'Tul',
     'Hah?',
     'Ngetik apaan? Burem'
+    'Bodo Amat'
+    'Lah Ngatur'
+    'Kasih Paham dah'
 ]
 
 const { menuId } = require('./text') // For help command
